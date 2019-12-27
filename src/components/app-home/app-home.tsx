@@ -6,23 +6,17 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class AppHome {
-
   render() {
-    return (
+    return [
       <div class='app-home'>
         <p>
-          Welcome to the Stencil App Starter.
-          You can use this starter to build entire apps all with
-          web components using Stencil!
-          Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
+          This is a simulated login page. It does not make any real calls to an API.
         </p>
-
-        <stencil-route-link url='/profile/stencil'>
-          <button>
-            Profile page
-          </button>
-        </stencil-route-link>
-      </div>
-    );
+        <p>
+          However, it does offer you a set of controls to modify the state of the login page and observe the different states it can exist in.
+        </p>
+      </div>,
+      <app-login-form></app-login-form>
+    ];
   }
 }
